@@ -3,11 +3,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 
+class ScrappyKNN():
+    def fit(self, features_train,labels_train):
+        self.features_train = features_train
+        self.labels_train = labels_train
+
+
+    def predict(self,features_test):
+        prediction = []
+        for item in features_test:
+            #determine which other point is closest and use that to set label value
+            predictions.append(label)
+
+        return predictions
+
 iris = datasets.load_iris()
 
 features = iris.data
 labels = iris.target
-
 
 features_train,features_test,labels_train,labels_test = train_test_split(features,labels,test_size=.5)
 
